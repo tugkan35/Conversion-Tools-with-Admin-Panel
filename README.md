@@ -28,6 +28,7 @@ This website is built using HTML, CSS, and Bootstrap, with JavaScript and jQuery
 - Password : 1234
 
 # Pages of Admin Panel
+- index(Login Page)
 - dashboard
 - tasks
 - mails
