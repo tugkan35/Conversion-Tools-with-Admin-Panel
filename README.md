@@ -4,6 +4,7 @@ This website is built using HTML, CSS, and Bootstrap, with JavaScript and jQuery
 ## 🛠️ Built With
 * **Frontend:** HTML5, CSS3, Bootstrap4
 * **Logic & Functionality:** JavaScript, jQuery (Used for converter tools and the admin panel)
+* **CRUD:** JavaScript & jQuery
 
 # Pages:
 - index
