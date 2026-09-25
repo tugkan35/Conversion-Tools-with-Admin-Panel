@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Admin / Users</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+  <!-- Logo -->
+  <link rel="shortcut icon" href="../images/admin.png">
+  <link rel="apple-touch-icon" href="../images/admin.png">
+
+</head>
+<body onload="checkLogin()">
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <button id="menuToggle" class="btn btn-outline-light mr-2" type="button">
+    <i class="fas fa-bars"></i>
+</button>
+  <div class="main">
+    <a class="navbar-brand ml-2" href="../index.html" target="_blank">
+    www.easyconverter.42web.io
+    </a>
+  </div>
+</nav>
+
+<div class="d-flex">
+  <!-- Sidebar -->
+   <div class="collapse show bg-dark text-white p-3" id="sidebarMenu">
+    <h3 class="text-white pb-2">Admin Panel</h3><hr class="bg-light">
+	<div class="sidebar-links pt-2">
+	<a href="dashboard.html" class="d-block text-white py-2"><i class="fas fa-fw fa-tachometer-alt mr-1"></i>Dashboard</a>
+	<a href="tasks.html" class="d-block text-white py-2"><i class="fas fa-list mr-1"></i>Tasks</a>
+	<a href="texteditor.html" class="d-block text-white py-2"><i class="fas fa-keyboard mr-1"></i>Text Editor</a>
+	<a href="mails.html" class="d-block text-white py-2"><i class="fas fa-mail-bulk mr-1"></i>Mails</a>
+	<a href="users.html" class="d-block text-white py-2"><i class="fas fa-users mr-1"></i>Users</a>
+    <a href="logs.html" class="d-block text-white py-2"><i class="fas fa-file-alt mr-1"></i>Logs</a>
+    <a href="security.html" class="d-block text-white py-2"><i class="fas fa-key mr-1"></i>Security</a>
+	</div><hr class="bg-light">
+    <button onclick="logout()" class="btn btn-danger btn-sm btn-block mt-3">Log Out</button>
+  </div> 
+</div>
+<!-- Content -->
+  <div class="flex-fill col-md-10 pt-6 content">
+    <div class="d-flex justify-content-between align-items-center">
+      <h3>Users</h3>
+	  <button class="btn btn-primary" data-toggle="modal" data-target="#userModal" onclick="openModal()">Add New User</button>
+    </div>
+	<nav aria-label="breadcrumb">
+     <ol class="breadcrumb mt-1">
+         <li class="breadcrumb-item"><a href="dashboard.html">Admin</a></li>
+         <li class="breadcrumb-item active" aria-current="page">Users</li>
+     </ol>
+    </nav> 
+    
+    <div class="alert alert-info mt-2">
+      Total Users: <span id="totalUsers"></span>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped table-light table-bordered table-sm">
+        <thead class="thead-dark">
+          <tr><th>ID</th><th>User Name</th><th>E-Mail</th><th>Role</th><th>Status</th><th>Actions</th></tr>
+        </thead>
+        <tbody id="userBody"></tbody>
+      </table>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center">
+      <div>
+        <label>Per Page:</label>
+        <select id="perPage" class="form-control d-inline-block" style="width:auto;">
+         <option>5</option>
+         <option>10</option>
+         <option>30</option>
+         <option>50</option>
+		 <option>100</option>
+        </select>
+      </div>
+      <nav>
+        <ul class="pagination pagination-sm mb-0" id="pagination"></ul>
+      </nav>
+    </div>
+  </div>
+
+<!-- Modal -->
+<div class="modal fade" id="userModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form id="userForm">
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title" id="modalTitle">Add New User</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span class="text-white" aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" id="userId">
+          <div class="form-group">
+            <label>User Name</label>
+            <input type="text" id="username" class="form-control" placeholder="User Name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label>E-Mail</label>
+            <input type="email" id="email" class="form-control" placeholder="E-Mail" name="email" required>
+          </div>
+          <div class="form-group">
+            <label>Role</label>
+            <select id="role" class="form-control" required>
+              <option value="admin">Admin</option>
+              <option value="editor">Editor</option>
+              <option value="user">User</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Status</label>
+            <select id="status" class="form-control" required>
+              <option value="active">Active</option>
+              <option value="inactive">InActive</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer bg-dark">
+          <button type="submit" class="btn btn-success">Save</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Section -->
+	
+	<footer class="bg-dark text-center text-white" id="main-footer">
+        <!-- Copyright -->
+        <div class="copyright-link text-center p-3" style="font-size:20px; color:#48dbfb;">
+            © 2021-<span id="year"></span> Copyright:
+            <a class="text-white" href="index.html"><span id="www"></span></a>
+        </div>
+        <!-- Copyright --> 
+	</footer>
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script src="js/app.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/user.js"></script>
+<script src="js/copyright.js"></script>
+</body>
+</html>

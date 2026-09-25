@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <title>Login - Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+  <!-- Logo -->
+  <link rel="shortcut icon" href="../images/admin.png">
+  <link rel="apple-touch-icon" href="../images/admin.png">
+</head>
+<body class="bg-light">
+
+<section id="borderhead" class="section-box">
+    <div class="container">
+	    <div class="row">
+		    <div class="col-md-6 offset-md-3 text-center">
+			    <div class="section-top">
+				    <h1>Admin</h1>
+					<hr>
+				</div>  
+			</div>
+		</div>	
+	</div>
+</section>
+
+<div class="container d-flex vh-100">
+  <div class="card mx-auto" style="max-width:400px;width:100%;">
+    <div class="card-header text-center bg-dark text-white">
+	    
+        <h3><i class="fas fa-user-lock mr-2"></i>Admin Login</h3>
+    </div>
+    <div class="card-body">
+      <form autocomplete="off" id="formLogin">
+	    <input type="hidden" name="csrf_token" value="a81c92ff">
+        <div class="form-group">
+          <label>User Name</label>
+          <input autocomplete="off" type="text" id="loginUsername" class="form-control" placeholder="User Name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input autocomplete="off" type="password" id="loginPassword" class="form-control" placeholder="Password" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+console.log = function() {};
+console.warn = function() {};
+console.error = function() {};
+console.info = function() {};
+console.debug = function() {};
+</script>
+<script src="js/rightclick.js"></script>
+<script src="js/devtool.js"></script>
+<script src="js/plugin.js"></script>
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script src="js/app.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

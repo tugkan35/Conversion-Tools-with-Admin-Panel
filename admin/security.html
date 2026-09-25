@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Admin / Security</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+  <!-- Logo -->
+  <link rel="shortcut icon" href="../images/admin.png">
+  <link rel="apple-touch-icon" href="../images/admin.png">
+  
+</head>
+<body onload="checkLogin()">
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <button id="menuToggle" class="btn btn-outline-light mr-2" type="button">
+    <i class="fas fa-bars"></i>
+</button>
+  <div class="main">
+    <a class="navbar-brand ml-2" href="../index.html" target="_blank">
+    www.easyconverter.42web.io
+    </a>
+  </div>
+</nav>
+
+<div class="d-flex">
+  <!-- Sidebar -->
+  <div class="collapse show bg-dark text-white p-3" id="sidebarMenu">
+    <h3 class="text-white pb-2">Admin Panel</h3><hr class="bg-light">
+	<div class="sidebar-links pt-2">
+	<a href="dashboard.html" class="d-block text-white py-2"><i class="fas fa-fw fa-tachometer-alt mr-1"></i>Dashboard</a>
+	<a href="tasks.html" class="d-block text-white py-2"><i class="fas fa-list mr-1"></i>Tasks</a>
+	<a href="texteditor.html" class="d-block text-white py-2"><i class="fas fa-keyboard mr-1"></i>Text Editor</a>
+	<a href="mails.html" class="d-block text-white py-2"><i class="fas fa-mail-bulk mr-1"></i>Mails</a>
+	<a href="users.html" class="d-block text-white py-2"><i class="fas fa-users mr-1"></i>Users</a>
+    <a href="logs.html" class="d-block text-white py-2"><i class="fas fa-file-alt mr-1"></i>Logs</a>
+    <a href="security.html" class="d-block text-white py-2"><i class="fas fa-key mr-1"></i>Security</a>
+	</div><hr class="bg-light">
+    <button onclick="logout()" class="btn btn-danger btn-sm btn-block mt-3">Log Out</button>
+  </div>
+</div>
+ <!-- Content -->
+  <div class="flex-fill col-md-10 pt-6 content">
+    <div class="d-flex justify-content-between align-items-center">
+      <h3>Security</h3>
+    </div>
+    <nav aria-label="breadcrumb">
+     <ol class="breadcrumb mt-1">
+         <li class="breadcrumb-item"><a href="dashboard.html">Admin</a></li>
+         <li class="breadcrumb-item active" aria-current="page">Security</li>
+     </ol>
+    </nav>
+    <form id="pwdForm" style="max-width:400px; margin-top:20px;">
+      <div class="form-group">
+        <label>Current Password</label>
+        <input type="password" id="oldPwd" class="form-control" placeholder="Current Password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label>New Password</label>
+        <input type="password" id="newPwd" class="form-control" placeholder="New Password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label>New Password (Repeat)</label>
+        <input type="password" id="newPwd2" class="form-control" placeholder="New Password (Repeat)" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Change Password</button>
+    </form>
+  </div>
+
+<!-- Footer Section -->
+	
+	<footer class="bg-dark text-center text-white" id="main-footer">
+        <!-- Copyright -->
+        <div class="copyright-link text-center p-3" style="font-size:20px; color:#48dbfb;">
+            © 2021-<span id="year"></span> Copyright:
+            <a class="text-white" href="index.html"><span id="www"></span></a>
+        </div>
+        <!-- Copyright --> 
+	</footer>
+
+<script src="js/jquery-3.2.1.js"></script>
+<script src="js/popper.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script src="js/app.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/security.js"></script>
+<script src="js/copyright.js"></script>
+</body>
+</html>
