@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<title>EasyConverter - Weight-Converters</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#48dbfb">
+	<meta name="google-site-verification" content="your code" />
+	<meta name="robots" content="all,follow/">
+	<meta name="description" content="Free easy weight converter, Kilograms ( kg ), Pounds ( lb ), Grams ( g ), Stones ( st ), Ounces ( oz )">
+    <meta name="keywords" content="easy, Weight Converters, kg to lbs, grams to ounces, kilograms to pounds, kilograms to stones, grams to ounces, engineering">
+	<link rel="canonical" href="http://www.easyconverter.42web.io/">
+    <link rel="canonical" href="https://easyconverter.42web.io/">
+	<meta content="Tugkan Zenger" name="author">
+	<meta name="image" content="http://www.easyconverter.42web.io/images/logo.png"/>
+    <meta name="image" content="https://easyconverter.42web.io/images/logo.png"/>
+    <!-- <base href="http://www.easyconverter.42web.io/"> -->
+    <!-- <base href="https://easyconverter.42web.io/"> -->
+	<!-- This code does not work on localhost but works on a web server. -->
+	
+    <!-- Fontawesome CSS -->
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	
+	<!-- Logo -->
+	<link rel="shortcut icon" href="images/logo.png">
+	<link rel="apple-touch-icon" href="images/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+	
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- Header JS -->
+	<script src="js/header.js" type="text/javascript"></script>
+	
+  </head>
+  <body>
+    <header class="nav-container">
+    <div class="adarea text-center py-2"> 
+        <h2><a class="text-white" href="contact.html">Place Your AD here</a></h2>
+    </div>
+	</header>
+    
+	<!-- Nav Menu -->
+  <nav id="navbar_top" class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+	    <button class="navbar-toggler" data-toggle="collapse" data-target="#nvbCollapse">
+		    <span class="navbar-toggler-icon"></span>
+		</button>
+  
+    <a href="index.html" class="navbar-brand"><i class="fas fa-calculator mr-1"></i>Converters</a>
+	<div class="collapse navbar-collapse" id="nvbCollapse">
+	            <ul class="navbar-nav mr-auto">
+				    <li class="nav-item">
+				    <a class="nav-link" href="faq.html">FAQs</a>
+				    </li>
+				</ul>
+			    <ul class="navbar-nav ml-auto">
+				   <li class="nav-item">
+				    <a class="nav-link" href="index.html">Home</a>
+				    </li>
+					<li class="nav-item">
+				    <a class="nav-link" href="about.html">About</a>
+				    </li>
+					<li class="nav-item">
+				    <a class="nav-link" href="blog.html">Blog</a>
+				    </li>
+					<li class="nav-item">
+				    <a class="nav-link" href="contact.html">Contact</a>
+				    </li>
+					<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Apps
+                    </a>
+                <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="speed.html">Speed</a>
+                    <a class="dropdown-item" href="length.html">Length</a>
+                    <a class="dropdown-item" href="temperature.html">Temperature</a>
+					<a class="dropdown-item" href="weight.html">Weight</a>
+					<a class="dropdown-item" href="hash.html">Hash</a>
+					<a class="dropdown-item" href="vize-final.html">Vize & Final</a>
+					<a class="dropdown-item" href="kdv.html">KDV</a>
+                    </li>
+				</ul>
+            </div>
+        </div>
+    </div>		
+  </nav>
+  
+  <main class="main-container">
+  <!-- Borderhead Section -->
+
+  <section id="borderhead" class="section-box">
+    <div class="container">
+	    <div class="row">
+		    <div class="col-md-6 offset-md-3 text-center">
+			    <div class="section-top">
+				    <h1>Weight-Converter</h1>
+					<hr>
+				</div>
+                <p>Type a value in any box to calculate weight units :</p>				
+			</div>
+		</div>	
+	</div>
+  </section>
+  
+  <!-- Weight Section -->
+  
+  <section id="weight" class="py-5">
+    <div class="container">
+	    <div class="row pb-4">
+	     <form class="form-group col-md-6 mx-auto">
+		    <div class="form-row">
+                <div class="form-group col-md-6">
+                   <label for="inputPounds4">POUNDS</label>
+                   <input id="inputPounds" class="form-control" style="border-color: #48dbfb;" type="number" placeholder="Pounds" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+                </div>
+                <div class="form-group col-md-6">
+                   <label for="inputKilograms4">KILOGRAMS</label>
+                   <input id="inputKilograms" class="form-control" style="border-color: #48dbfb;" type="number" placeholder="Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+                </div>
+              </div>
+			  
+			  <div class="form-row">
+                <div class="form-group col-md-6">
+                   <label for="inputOunces4">OUNCES</label>
+                   <input id="inputOunces" class="form-control" style="border-color: #48dbfb;" type="number" placeholder="Ounces" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+                </div>
+                <div class="form-group col-md-6">
+                   <label for="inputGrams4">GRAMS</label>
+                   <input id="inputGrams" class="form-control" style="border-color: #48dbfb;" type="number" placeholder="Grams" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+                </div>
+              </div>
+			  
+			  <div class="form-row">
+                <div class="form-group col-md-6">
+                   <label for="inputStones4">STONES</label>
+                   <input id="inputStones" class="form-control" style="border-color: #48dbfb;" type="number" placeholder="Stones" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+				</div>
+				<div class="form-group col-md-6">
+				   <button  class="btn btn-outline-danger btn-block"type="reset">Clear  All</button>
+				</div>
+			  </div>
+            </div>			  
+		 </form>
+		</div>
+	   </div>
+  </section>
+  
+  <div class="col-md-6 mx-auto">
+    <article>
+    <div class="card">
+	    <div class="card-header bg-dark text-white">
+		    Weight-Units
+		</div>
+		<div class="card-body bg-light">
+		<h3><strong>What is Weight?</strong></h3>
+		<p class="card-text"><strong>Weight</strong> is the <strong>force with which an object is pulled toward the Earth (or another planet) due to gravity.</strong></p>
+		    <h3>In simple words:</h3>
+	        <ul>
+                <li>Weight tells us <strong>how heavy something feels</strong>, and it depends on <strong>both the mass of the object and the strength of gravity.</strong></li>
+            </ul><br>
+		    <h3>The formula for weight is:</h3>
+		    <font size="6" color="red"><strong>Weight (W)=Mass (m)*Gravity (g)</strong></font><br><br>
+            <h3>Where:</h3>
+	        <ul>
+                <li><strong>Mass (m)</strong> is the amount of matter in an object (measured in kilograms, kg)</li>
+                <li><strong>Gravity (g)</strong> is the acceleration due to gravity (on Earth, approximately 9.8m/s²)</li>
+            </ul>			
+			<h3>For example:</h3>
+	        <ul>
+                <li>If an object has a mass of <strong>10 kg</strong>, its weight on Earth is:</li>
+            </ul>
+		<p class="card-text">W=10*9.8=98N (Newtons)</p>
+			<h3>Important: <strong>Mass and weight are different:</strong></h3>
+	        <ul>
+                <li><strong>Mass</strong> is constant everywhere.</li>
+				<li><strong>Weight</strong> changes if gravity changes (for example, on the Moon, weight is less than on Earth).</li>
+            </ul>
+			<h3 class="pt-4"><strong>Important Weight conversions :</strong></h3>
+			<p>1 Kilograms ( kg ) is equals to 1000 Grams ( g )</p>
+			<p>1 Pounds ( lb ) is equals to 454 Grams ( g )</p>
+			<p>1 Pounds ( lb ) is equals to 0,45 Kilograms ( kg )</p>
+			<p>1 Grams ( g ) is equals to 0,0010 Kilograms ( kg )</p>
+			<p>1 Stones ( st ) is equals to 6350 Grams ( g )</p>
+			<p>1 Stones ( st ) is equals to 6,4 Kilograms ( kg )</p>
+			<p>1 Ounces ( oz ) is equals to 28,3 Grams ( g )</p>
+			<p>1 Ounces ( oz ) is equals to 0,0283 Kilograms ( kg )</p></br>
+			<div class="col-md-7 mr-auto">
+		<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Unit</th>
+      <th scope="col">Symbol</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Kilograms</td>
+	  <td>kg</td>
+    </tr>
+	<tr>
+      <td>Grams</td>
+	  <td>g</td>
+    </tr>
+	<tr>
+      <td>Ounces</td>
+	  <td>oz</td>
+    </tr>
+	<tr>
+      <td>Pounds</td>
+	  <td>lb</td>
+    </tr>
+	<tr>
+      <td>Stones</td>
+	  <td>st</td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+			<hr class="my-2">
+			    <div class="share-button mx-auto">
+                    <span><i class="fas fa-share-alt"></i> Share!</span>
+                    <a href="https://wa.me/?text=[Weight-Converter] [http://easyconverter.42web.io/weight.html]" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="http://www.twitter.com/share?text=[Weight-Converter]url=[http://easyconverter.42web.io/weight.html]" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://telegram.me/share/url?url=<http://easyconverter.42web.io/weight.html>&text=<Weight-Converter>" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url={http://easyconverter.42web.io/weight.html}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+			<hr class="my-2">
+		</div>
+		<div class="card-footer">
+		    <span class="tag"><i class="fas fa-tag mr-2"></i>Keywords :</span>
+			<hr class="my-1">
+            <a href="weight.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Top Rankings on Google</a>
+			<a href="weight.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#kg to lbs</a>
+			<a href="weight.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#lbs to kg</a>
+			<a href="weight.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Grams to Ounces</a>
+			<a href="weight.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Kilograms to Pounds</a>
+			<a href="weight.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Pounds to Kilograms</a>
+			<a href="weight.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Kilograms to Stones</a>
+			<a href="weight.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Stones to Kilograms</a>
+			<a href="weight.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Grams to Ounces</a>
+			<a href="weight.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Ounces to Grams</a>
+			<a href="weight.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Kilograms ( kg )</a>
+			<a href="weight.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Pounds ( lb )</a>
+			<a href="weight.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Grams ( g )</a>
+			<a href="weight.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Stones ( st )</a>
+			<a href="weight.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Ounces ( oz )</a>
+		</div>
+	</div>
+	</article>
+  </div>
+  <a href="#" class="crunchify-top"><span class="top-arrow"><i class="fas fa-chevron-up"></i></span></a>
+  </main>
+  
+  <!-- Footer Section -->
+	
+	<footer class="bg-dark text-center text-white" id="main-footer">
+	    <div class="container P-1">
+		    <div class="row text-center py-3">
+			    <div class="col-md-6 mx-auto">
+				<div class="link-top">
+		            <h4 class="text-uppercase">social media</h4>
+			        <hr>
+		        </div>
+	    <div class="social-media">
+        <div class="facebook">
+		    <a href="https://www.facebook.com/tugkan.zenger" target="_blank"><i class="fab fa-facebook"></i></a>
+		</div>
+		<div class="twitter">
+		    <a href="https://twitter.com/YTZ35" target="_blank"><i class="fab fa-twitter"></i></a>
+		</div>
+		<div class="instagram">
+		    <a href="https://www.instagram.com/tugkan35/" target="_blank"><i class="fab fa-instagram"></i></a>
+		</div>
+		<div class="youtube">
+		    <a href="https://www.youtube.com/channel/UCkekKo0LsxkPPQbV8MJpoOA?sub_confirmation=1" target="_blank"><i class="fab fa-youtube"></i></a>
+		</div>
+        </div>  
+				</div> 
+			</div> 
+		    <!-- Section: Links -->
+    <section class="footer-links">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="link-top">
+		    <h4 class="text-uppercase">Info</h4>
+			<hr>
+		  </div>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="index.html" class="text-white">Home</a>
+            </li>
+            <li>
+              <a href="about.html" class="text-white">About</a>
+            </li>
+            <li>
+              <a href="blog.html" class="text-white">Blog</a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-white">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="link-top">
+		    <h4 class="text-uppercase">Apps</h4>
+			<hr>
+		  </div>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="speed.html" class="text-white">Speed</a>
+            </li>
+            <li>
+              <a href="length.html" class="text-white">Length</a>
+            </li>
+            <li>
+              <a href="temperature.html" class="text-white">Temperature</a>
+            </li>
+            <li>
+              <a href="weight.html" class="text-white">Weight</a>
+            </li>
+			<li>
+              <a href="hash.html" class="text-white">Hash</a>
+            </li>
+			<li>
+              <a href="vize-final.html" class="text-white">Vize & Final</a>
+            </li>
+			<li>
+              <a href="kdv.html" class="text-white">KDV</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="link-top">
+		    <h4 class="text-uppercase">My web sites</h4>
+			<hr>
+		  </div>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="https://www.instagram.com/ytzsupercars/" target="_blank" class="text-white">YTZSuperCars.com</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/perihaninmutfagi35/" target="_blank" class="text-white">PerihanKitchen.com</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/zengergifts/" target="_blank" class="text-white">ZengerGifts.com</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/sokukteker/" target="_blank" class="text-white">SokukTeker.com</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">  
+          <div class="link-top">
+		    <h4 class="text-uppercase">About</h4>
+			<hr>
+		  </div>  
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="privacypolicy.html" class="text-white">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="references.html" class="text-white">References</a>
+            </li>
+			<li>
+              <a href="keywords.html" class="text-white">Keywords</a>
+            </li>
+            <li>
+              <a href="faq.html" class="text-white">FAQs</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Ad Area -->
+  <div class="adarea2 mx-auto">
+        <h2><a class="text-white" href="contact.html">Place Your AD here</a></h2>
+  </div>
+  
+  <!-- Copyright -->
+  <div class="copyright-link text-center p-3" style="font-size:20px; color:#48dbfb;">
+    © 2021-<span id="year"></span> Copyright:
+    <a class="text-white" href="index.html"><span id="www"></span></a>
+  </div>
+  <!-- Copyright --> 
+	</footer>
+	
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+	<script src="js/scrollTop.js"></script>
+	<script src="js/weight.js"></script>
+	<script src="js/copyright.js"></script>
+  </body>
+</html>
+
+<?php include 'log.php';?>

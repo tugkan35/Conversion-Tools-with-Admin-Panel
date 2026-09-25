@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<title>EasyConverter - Vize & Final</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#48dbfb">
+	<meta name="google-site-verification" content="your code" />
+	<meta name="robots" content="all,follow/">
+	<meta name="description" content="Vize ve Final sınavlarınızı buradan hesaplayabilirsiniz.">
+    <meta name="keywords" content="vize ve final, not ortalaması hesaplama, vize sınavı, final sınavı">
+	<link rel="canonical" href="http://www.easyconverter.42web.io/">
+    <link rel="canonical" href="https://easyconverter.42web.io/">
+	<meta content="Tugkan Zenger" name="author">
+	<meta name="image" content="http://www.easyconverter.42web.io/images/logo.png"/>
+    <meta name="image" content="https://easyconverter.42web.io/images/logo.png"/>
+    <!-- <base href="http://www.easyconverter.42web.io/"> -->
+    <!-- <base href="https://easyconverter.42web.io/"> -->
+	<!-- This code does not work on localhost but works on a web server. -->
+
+    <!-- Fontawesome CSS -->
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	
+	<!-- Logo -->
+	<link rel="shortcut icon" href="images/logo.png">
+	<link rel="apple-touch-icon" href="images/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+	
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- Header JS -->
+	<script src="js/header.js" type="text/javascript"></script>
+	
+  </head>
+  <body>
+    <header class="nav-container">
+    <div class="adarea text-center py-2"> 
+        <h2><a class="text-white" href="contact.html">Place Your AD here</a></h2>
+    </div>
+	</header>
+    
+	<!-- Nav Menu -->
+  <nav id="navbar_top" class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+	    <button class="navbar-toggler" data-toggle="collapse" data-target="#nvbCollapse">
+		    <span class="navbar-toggler-icon"></span>
+		</button>
+  
+    <a href="index.html" class="navbar-brand"><i class="fas fa-calculator mr-1"></i>Converters</a>
+	<div class="collapse navbar-collapse" id="nvbCollapse">
+	            <ul class="navbar-nav mr-auto">
+				    <li class="nav-item">
+				    <a class="nav-link" href="faq.html">FAQs</a>
+				    </li>
+				</ul>
+			    <ul class="navbar-nav ml-auto">
+				   <li class="nav-item">
+				    <a class="nav-link" href="index.html">Home</a>
+				    </li>
+					<li class="nav-item">
+				    <a class="nav-link" href="about.html">About</a>
+				    </li>
+					<li class="nav-item">
+				    <a class="nav-link" href="blog.html">Blog</a>
+				    </li>
+					<li class="nav-item">
+				    <a class="nav-link" href="contact.html">Contact</a>
+				    </li>
+					<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Apps
+                    </a>
+                <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="speed.html">Speed</a>
+                    <a class="dropdown-item" href="length.html">Length</a>
+                    <a class="dropdown-item" href="temperature.html">Temperature</a>
+					<a class="dropdown-item" href="weight.html">Weight</a>
+					<a class="dropdown-item" href="hash.html">Hash</a>
+                    <a class="dropdown-item" href="vize-final.html">Vize & Final</a>
+					<a class="dropdown-item" href="kdv.html">KDV</a>
+                    </li>
+				</ul>
+            </div>
+        </div>
+    </div>		
+  </nav>
+  
+  <!-- Borderhead Section -->
+
+  <main class="main-container">
+  <section id="borderhead" class="section-box">
+    <div class="container">
+	    <div class="row">
+		    <div class="col-md-6 offset-md-3 text-center">
+			    <div class="section-top">
+				    <h1>Vize-Final</h1>
+					<hr>
+				</div>
+                <p>Vize & Final notlarını hesaplamak için herhangi bir kutuya bir değer yazın:</p>				
+			</div>
+		</div>	
+	</div>
+  </section>
+  
+  <!-- Vize-Fianl Section -->
+  
+  <section id="grade-calculator" class="py-5">
+  <div class="container">
+    <div class="row pb-5">
+      <form class="form-group col-md-6 mx-auto">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputVize">Vize Notu</label>
+            <input id="inputVize" class="form-control" type="number" placeholder="Vize Notu">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputFinal">Final Notu</label>
+            <input id="inputFinal" class="form-control" type="number" placeholder="Final Notu">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <button type="button" class="btn btn-primary btn-block" onclick="calculateGrade()">Hesapla</button>
+          </div>
+          <div class="form-group col-md-6">
+            <button type="reset" class="btn btn-outline-danger btn-block">Temizle</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <p id="test" class="alert alert-info text-center">Sonuç burada görünecek.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  <div class="col-md-6 mx-auto">
+    <article>
+    <div class="card">
+	    <div class="card-header bg-dark text-white">
+		    Vize-Final
+		</div>
+		<div class="card-body bg-light">
+		    <h3><strong>Vize nedir?</strong></h3>
+			<p class="card-text">Üniversite ve yüksek okullarda yapılan ilk sınav, ara sınavıdır.
+			</p>
+			<h3><strong>Final nedir?</strong></h3>
+			<p class="card-text">Final sınavları ise bütün yıl işlenen konuları kapsar. 
+			Bu yönüyle vize sınavları daha az konu içerdiği için öğrencilerin daha rahat bir şekilde puanlarını yükseltmelerine yardımcı olur. 
+			Üniversitedeki bütün derslerde vize ve final sınavları yapılır.
+			</p>
+			<h3><strong>Vize ve Final ortalaması nasıl hesaplanır?</strong></h3>
+			<p class="card-text">Alınan vize- final puan ortalama ağırlığı oranı çarpıldıktan sonra yüze bölünerek ortalama alınmaktadır.
+			Ortalama hesabında vize puanı <strong>%30</strong> final puanı ise <strong>%70</strong> olarak alınmaktadır.
+			Sonucun <strong>GEÇER</strong> not kabul edilmesi için not ortalaması <strong>35 puan ve üstü</strong> olmalıdır.
+			</p>
+			
+			<h3><strong>Vize & Final Notu Hesaplama Formülü :</strong></h3>
+			<font size="6" color="red"><strong>VizeNotu*30/100=Sonuç</strong></font>			
+			<font size="6" color="red"><strong>FinalNotu*70/100=Sonuç</strong></font>
+			<hr class="my-2">
+			    <div class="share-button mx-auto">
+                    <span><i class="fas fa-share-alt"></i> Paylaş!</span>
+                    <a href="https://wa.me/?text=[Vize-Final] [http://easyconverter.42web.io/vize-final.html]" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="http://www.twitter.com/share?text=[Vize-Final]url=[http://easyconverter.42web.io/vize-final.html]" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://telegram.me/share/url?url=<http://easyconverter.42web.io/vize-final.html>&text=<Vize-Final>" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url={http://easyconverter.42web.io/vize-final.html}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+			<hr class="my-2">
+		</div>
+		<div class="card-footer">
+		    <span class="tag"><i class="fas fa-tag mr-2"></i>Anahtar Kelimeler :</span>
+			<hr class="my-1">
+            <a href="vize-final.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Google'da Üst Sıralarda</a>
+			<a href="vize-final.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Vize & Final Hesaplama</a>
+			<a href="vize-final.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Vize Hesapla</a>
+			<a href="vize-final.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Final Hesapla</a>
+			<a href="vize-final.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Vize & Final Ortalama</a>
+			<a href="vize-final.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Vize %30</a>
+			<a href="vize-final.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Final %70</a>
+			<a href="vize-final.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Not Ortalaması Hesaplama</a>
+		</div>
+	</div>
+	</article>
+  </div>
+  <a href="#" class="crunchify-top"><span class="top-arrow"><i class="fas fa-chevron-up"></i></span></a>
+  </main>
+  
+  <!-- Footer Section -->
+	
+	<footer class="bg-dark text-center text-white" id="main-footer">
+	    <div class="container P-1">
+		    <div class="row text-center py-3">
+			    <div class="col-md-6 mx-auto">
+				<div class="link-top">
+		            <h4 class="text-uppercase">social media</h4>
+			        <hr>
+		        </div>
+	    <div class="social-media">
+        <div class="facebook">
+		    <a href="https://www.facebook.com/tugkan.zenger" target="_blank"><i class="fab fa-facebook"></i></a>
+		</div>
+		<div class="twitter">
+		    <a href="https://twitter.com/YTZ35" target="_blank"><i class="fab fa-twitter"></i></a>
+		</div>
+		<div class="instagram">
+		    <a href="https://www.instagram.com/tugkan35/" target="_blank"><i class="fab fa-instagram"></i></a>
+		</div>
+		<div class="youtube">
+		    <a href="https://www.youtube.com/channel/UCkekKo0LsxkPPQbV8MJpoOA?sub_confirmation=1" target="_blank"><i class="fab fa-youtube"></i></a>
+		</div>
+        </div>  
+				</div> 
+			</div> 
+		    <!-- Section: Links -->
+    <section class="footer-links">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="link-top">
+		    <h4 class="text-uppercase">Info</h4>
+			<hr>
+		  </div>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="index.html" class="text-white">Home</a>
+            </li>
+            <li>
+              <a href="about.html" class="text-white">About</a>
+            </li>
+            <li>
+              <a href="blog.html" class="text-white">Blog</a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-white">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="link-top">
+		    <h4 class="text-uppercase">Apps</h4>
+			<hr>
+		  </div>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="speed.html" class="text-white">Speed</a>
+            </li>
+            <li>
+              <a href="length.html" class="text-white">Length</a>
+            </li>
+            <li>
+              <a href="temperature.html" class="text-white">Temperature</a>
+            </li>
+            <li>
+              <a href="weight.html" class="text-white">Weight</a>
+            </li>
+			<li>
+              <a href="hash.html" class="text-white">Hash</a>
+            </li>
+			<li>
+              <a href="vize-final.html" class="text-white">Vize & Final</a>
+            </li>
+			<li>
+              <a href="kdv.html" class="text-white">KDV</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="link-top">
+		    <h4 class="text-uppercase">My web sites</h4>
+			<hr>
+		  </div>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="https://www.instagram.com/ytzsupercars/" target="_blank" class="text-white">YTZSuperCars.com</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/perihaninmutfagi35/" target="_blank" class="text-white">PerihanKitchen.com</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/zengergifts/" target="_blank" class="text-white">ZengerGifts.com</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/sokukteker/" target="_blank" class="text-white">SokukTeker.com</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">  
+          <div class="link-top">
+		    <h4 class="text-uppercase">About</h4>
+			<hr>
+		  </div>  
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="privacypolicy.html" class="text-white">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="references.html" class="text-white">References</a>
+            </li>
+			<li>
+              <a href="keywords.html" class="text-white">Keywords</a>
+            </li>
+            <li>
+              <a href="faq.html" class="text-white">FAQs</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Ad Area -->
+  <div class="adarea2 mx-auto">
+        <h2><a class="text-white" href="contact.html">Place Your AD here</a></h2>
+  </div>
+  
+  <!-- Copyright -->
+  <div class="copyright-link text-center p-3" style="font-size:20px; color:#48dbfb;">
+    © 2021-<span id="year"></span> Copyright:
+    <a class="text-white" href="index.html"><span id="www"></span></a>
+  </div>
+  <!-- Copyright --> 
+	</footer>
+	
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+	<script src="js/scrollTop.js"></script>
+	<script src="js/vize-final.js"></script>
+	<script src="js/copyright.js"></script>
+  </body>
+</html>
+
+<?php include 'log.php';?>

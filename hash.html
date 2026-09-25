@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <head>    
+	<title>EasyConverter - Hash-Generator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#48dbfb">
+	<meta name="google-site-verification" content="your code" />
+	<meta name="robots" content="all,follow/">
+	<meta name="description" content="This SHA256 online tool helps you calculate hashes from strings.">
+    <meta name="keywords" content="hash, hash generator, sha256">
+	<link rel="canonical" href="http://www.easyconverter.42web.io/">
+    <link rel="canonical" href="https://easyconverter.42web.io/">
+	<meta content="Tugkan Zenger" name="author">
+	<meta name="image" content="http://www.easyconverter.42web.io/images/logo.png"/>
+    <meta name="image" content="https://easyconverter.42web.io/images/logo.png"/>
+    <!-- <base href="http://www.easyconverter.42web.io/"> -->
+    <!-- <base href="https://easyconverter.42web.io/"> -->
+	<!-- This code does not work on localhost but works on a web server. -->
+
+    <!-- Fontawesome CSS -->
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	
+	<!-- Logo -->
+	<link rel="shortcut icon" href="images/logo.png">
+	<link rel="apple-touch-icon" href="images/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+	
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- Header JS -->
+	<script src="js/header.js" type="text/javascript"></script>
+	
+  </head>
+  <body>
+    <header class="nav-container">
+    <div class="adarea text-center py-2"> 
+        <h2><a class="text-white" href="contact.html">Place Your AD here</a></h2>
+    </div>
+	</header>
+    
+	<!-- Nav Menu -->
+  <nav id="navbar_top" class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+	    <button class="navbar-toggler" data-toggle="collapse" data-target="#nvbCollapse">
+		    <span class="navbar-toggler-icon"></span>
+		</button>
+  
+    <a href="index.html" class="navbar-brand"><i class="fas fa-calculator mr-1"></i>Converters</a>
+	<div class="collapse navbar-collapse" id="nvbCollapse">
+	            <ul class="navbar-nav mr-auto">
+				    <li class="nav-item">
+				    <a class="nav-link" href="faq.html">FAQs</a>
+				    </li>
+				</ul>
+			    <ul class="navbar-nav ml-auto">
+				   <li class="nav-item">
+				    <a class="nav-link" href="index.html">Home</a>
+				    </li>
+					<li class="nav-item">
+				    <a class="nav-link" href="about.html">About</a>
+				    </li>
+					<li class="nav-item">
+				    <a class="nav-link" href="blog.html">Blog</a>
+				    </li>
+					<li class="nav-item">
+				    <a class="nav-link" href="contact.html">Contact</a>
+				    </li>
+					<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Apps
+                    </a>
+                <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="speed.html">Speed</a>
+                    <a class="dropdown-item" href="length.html">Length</a>
+                    <a class="dropdown-item" href="temperature.html">Temperature</a>
+					<a class="dropdown-item" href="weight.html">Weight</a>
+					<a class="dropdown-item" href="hash.html">Hash</a>
+					<a class="dropdown-item" href="vize-final.html">Vize & Final</a>
+					<a class="dropdown-item" href="kdv.html">KDV</a>
+                    </li>
+				</ul>
+            </div>
+        </div>
+    </div>		
+  </nav>
+  
+  <!-- Borderhead Section -->
+
+  <main class="main-container">
+  <section id="borderhead" class="section-box">
+    <div class="container">
+	    <div class="row">
+		    <div class="col-md-6 offset-md-3 text-center">
+			    <div class="section-top">
+				    <h1>Hash-Generator</h1>
+					<hr>
+				</div>
+                <p>Please enter a value to generate a hash!</p>				
+			</div>
+		</div>	
+	</div>
+  </section>
+  
+  <!-- Temperature Section -->
+  
+  <section id="temperature" class="py-5">
+    <div class="container">
+	    <div class="col-md-6 mx-auto">
+		<div class="form-group">
+            <label><strong>Enter Text:</strong></label>
+            <input type="text" maxlength="50" id="inputText" class="form-control" placeholder="Text to be hashed...">
+        </div>
+            <button onclick="generateHash()" class="btn btn-primary btn-block mt-3">Generate Hash</button>		
+        <div class="form-group mt-4">
+            <label><strong>Generated Hash:</strong></label>
+            <textarea id="outputHash" class="form-control" rows="5" readonly></textarea>
+        </div>
+		<div class="form-group">
+			<button onclick="copyToClipboard()" class="btn btn-success btn-block mt-3">Copy</button>
+		</div>
+		</div>
+    </div>
+  </section>
+  
+  <div class="col-md-6 mx-auto">
+    <article>
+    <div class="card">
+	    <div class="card-header bg-dark text-white">
+		    Hash-Units
+		</div>
+		<div class="card-body bg-light">
+		<h3><strong>What is Hash Generator SHA-256?</strong></h3>
+	    <p class="card-text">A <strong>SHA-256 hash generator</strong> is a tool that takes any input (text, file, password, etc.) 
+	    and produces a <strong>256-bit (64-character) hexadecimal hash value</strong> using the <strong>SHA-256 (Secure Hash Algorithm 256-bit)</strong> function.
+	    </p>
+	    </br>
+	    <h3><strong>What SHA-256 Does?</h3></strong>
+            <ul>
+                <li>Converts any input → fixed-length 64-char hash</li>
+                <li>The hash <strong>cannot be reversed</strong> (one-way function)</li>
+                <li>Even a tiny change in input makes a <strong>completely different</strong> hash</li>
+            </ul>		
+	    <h3><strong>Commonly used in :</strong></h3>
+            <ul>
+                <li>Password storage</li>
+                <li>File integrity verification</li>
+                <li>Digital signatures</li>
+                <li>Blockchain (Bitcoin uses SHA-256)</li>
+            </ul>
+			<h3><strong>Input :</strong></h3>
+			<font size="4" color="red"><strong>Hello</strong></font>			
+			<h3><strong>Output (SHA-256) :</strong></h3>
+			<font size="4" color="red"><strong>185f8db32271fe25f561a6fc938b2e264306ec304eda518007d1764826381969</strong></font>
+			<hr class="my-2">
+			    <div class="share-button mx-auto">
+                    <span><i class="fas fa-share-alt"></i> Share!</span>
+                    <a href="https://wa.me/?text=[Hash-Generator] [http://easyconverter.42web.io/hash.html]" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="http://www.twitter.com/share?text=[Hash-Generator]url=[http://easyconverter.42web.io/hash.html]" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://telegram.me/share/url?url=<http://easyconverter.42web.io/hash.html>&text=<Hash-Generator>" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url={http://easyconverter.42web.io/hash.html}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+			<hr class="my-2">
+		</div>
+		<div class="card-footer">
+		    <span class="tag"><i class="fas fa-tag mr-2"></i>Keywords :</span>
+			<hr class="my-1">
+            <a href="hash.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Top Rankings on Google</a>
+			<a href="hash.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Hash</a>
+			<a href="hash.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Hash Generator</a>
+			<a href="hash.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#SHA-256</a>
+			<a href="hash.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Password Storage</a>
+			<a href="hash.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#File Integrity Verification</a>
+			<a href="hash.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Digital Signatures</a>
+			<a href="hash.html" class="btn btn-outline-dark btn-sm" role="button" aria-pressed="true">#Blockchain (Bitcoin uses SHA-256)</a>
+		</div>
+	</div>
+	</article>
+  </div>
+  <a href="#" class="crunchify-top"><span class="top-arrow"><i class="fas fa-chevron-up"></i></span></a>
+  </main>
+  
+  <!-- Footer Section -->
+	
+	<footer class="bg-dark text-center text-white" id="main-footer">
+	    <div class="container P-1">
+		    <div class="row text-center py-3">
+			    <div class="col-md-6 mx-auto">
+				<div class="link-top">
+		            <h4 class="text-uppercase">social media</h4>
+			        <hr>
+		        </div>
+	    <div class="social-media">
+        <div class="facebook">
+		    <a href="https://www.facebook.com/tugkan.zenger" target="_blank"><i class="fab fa-facebook"></i></a>
+		</div>
+		<div class="twitter">
+		    <a href="https://twitter.com/YTZ35" target="_blank"><i class="fab fa-twitter"></i></a>
+		</div>
+		<div class="instagram">
+		    <a href="https://www.instagram.com/tugkan35/" target="_blank"><i class="fab fa-instagram"></i></a>
+		</div>
+		<div class="youtube">
+		    <a href="https://www.youtube.com/channel/UCkekKo0LsxkPPQbV8MJpoOA?sub_confirmation=1" target="_blank"><i class="fab fa-youtube"></i></a>
+		</div>
+        </div>  
+				</div> 
+			</div> 
+		    <!-- Section: Links -->
+    <section class="footer-links">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="link-top">
+		    <h4 class="text-uppercase">Info</h4>
+			<hr>
+		  </div>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="index.html" class="text-white">Home</a>
+            </li>
+            <li>
+              <a href="about.html" class="text-white">About</a>
+            </li>
+            <li>
+              <a href="blog.html" class="text-white">Blog</a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-white">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="link-top">
+		    <h4 class="text-uppercase">Apps</h4>
+			<hr>
+		  </div>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="speed.html" class="text-white">Speed</a>
+            </li>
+            <li>
+              <a href="length.html" class="text-white">Length</a>
+            </li>
+            <li>
+              <a href="temperature.html" class="text-white">Temperature</a>
+            </li>
+            <li>
+              <a href="weight.html" class="text-white">Weight</a>
+            </li>
+			<li>
+              <a href="hash.html" class="text-white">Hash</a>
+            </li>
+			<li>
+              <a href="vize-final.html" class="text-white">Vize & Final</a>
+            </li>
+			<li>
+              <a href="kdv.html" class="text-white">KDV</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="link-top">
+		    <h4 class="text-uppercase">My web sites</h4>
+			<hr>
+		  </div>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="https://www.instagram.com/ytzsupercars/" target="_blank" class="text-white">YTZSuperCars.com</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/perihaninmutfagi35/" target="_blank" class="text-white">PerihanKitchen.com</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/zengergifts/" target="_blank" class="text-white">ZengerGifts.com</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/sokukteker/" target="_blank" class="text-white">SokukTeker.com</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">  
+          <div class="link-top">
+		    <h4 class="text-uppercase">About</h4>
+			<hr>
+		  </div>  
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="privacypolicy.html" class="text-white">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="references.html" class="text-white">References</a>
+            </li>
+			<li>
+              <a href="keywords.html" class="text-white">Keywords</a>
+            </li>
+            <li>
+              <a href="faq.html" class="text-white">FAQs</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Ad Area -->
+  <div class="adarea2 mx-auto">
+        <h2><a class="text-white" href="contact.html">Place Your AD here</a></h2>
+  </div>
+  
+  <!-- Copyright -->
+  <div class="copyright-link text-center p-3" style="font-size:20px; color:#48dbfb;">
+    © 2021-<span id="year"></span> Copyright:
+    <a class="text-white" href="index.html"><span id="www"></span></a>
+  </div>
+  <!-- Copyright --> 
+	</footer>
+	
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+	<script src="js/scrollTop.js"></script>
+	<script src="js/hash.js"></script>
+	<script src="js/copyright.js"></script>
+  </body>
+</html>
+
+<?php include 'log.php';?>
